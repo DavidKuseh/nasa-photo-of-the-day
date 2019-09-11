@@ -1,6 +1,7 @@
 import React, { useState, useEffect }from "react";
 import "./App.css";
 import axios from "axios";
+import MediaContainer from "./MediaContainer";
 
 function App() {
   const [mediaURL, setMediaUrl] = useState();
@@ -39,8 +40,7 @@ function App() {
           mediaType={mediaType}
           title={title}
           description={description}
-          setDate={setDate}
-          mediaURL={meidaURL}
+          mediaURL={mediaURL}
         />
       </div>
     </>

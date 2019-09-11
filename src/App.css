@@ -31,3 +31,14 @@
     transform: rotate(360deg);
   }
 }
+
+.container div:nth-child(2) {
+  width: 400px;
+  height: 400px;
+}
+
+.description {
+  width: 400px;
+  height: 400px;
+  color: black;
+}
