@@ -3,9 +3,9 @@ import React from "react";
 
 function Description({description}) {
     return (
-        // <div>
-            <Description description={description} />
-        // {/* </div> */}
+        <div className= "description">
+            {description} 
+        </div>
     )
 }
 

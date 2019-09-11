@@ -30,13 +30,7 @@ function App() {
         <div>
           <h3>NASA Photo of the Day</h3>
         </div>
-        {/* <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀! 
-        </p> */}
-
         <MediaContainer
-          date={date}
           mediaType={mediaType}
           title={title}
           description={description}

@@ -1,5 +1,4 @@
 import React from "react";
-import { deflate } from "zlib";
 
 function ShowMedia({mediaURL}){
     return (
