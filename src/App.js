@@ -8,7 +8,6 @@ function App() {
   const [description, setDescription] = useState();
   const [title, setTitle] = useState();
   const [mediaType, setMediaType] = useState();
-  const [date, setDate] = useState("");
 
   useEffect(()=> {
    axios.get("https://api.nasa.gov/planetary/apod?api_key=h6gk8qlDpi9XRYbLiuRoagS4u6yAbIv0CxNm64Td")
@@ -17,12 +16,11 @@ function App() {
         setDescription(response.data.explanation);
         setTitle(response.data.title);
         setMediaType(response.data.media_type);
-        setDate(response.data.date);
       })
       .catch(error => {
         console.log(error);
       })
-  }, [mediaURL, date])
+  }, [mediaURL])
 
   return (
     <>
