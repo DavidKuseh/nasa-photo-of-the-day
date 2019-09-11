@@ -3,7 +3,7 @@ import "./App.css";
 import axios from "axios";
 
 function App() {
-  const [mediaUrl, setMediaUrl] = useState();
+  const [mediaURL, setMediaUrl] = useState();
   const [description, setDescription] = useState();
   const [title, setTitle] = useState();
   const [mediaType, setMediaType] = useState();
@@ -21,15 +21,29 @@ function App() {
       .catch(error => {
         console.log(error);
       })
-  }, [])
+  }, [mediaURL, date])
 
   return (
-    <div className="App">
-      <p>
+    <>
+      <div className="App">
+        <div>
+          <h3>NASA Photo of the Day</h3>
+        </div>
+        {/* <p>
         Read through the instructions in the README.md file to build your NASA
         app! Have fun 🚀! 
-      </p>
-    </div>
+        </p> */}
+
+        <MediaContainer
+          date={date}
+          mediaType={mediaType}
+          title={title}
+          description={description}
+          setDate={setDate}
+          mediaURL={meidaURL}
+        />
+      </div>
+    </>
   );
 }
 
