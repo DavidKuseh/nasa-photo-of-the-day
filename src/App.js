@@ -1,7 +1,7 @@
 import React, { useState, useEffect }from "react";
 import "./App.css";
 import axios from "axios";
-import MediaContainer from "./MediaContainer";
+import MediaContainer from "./Components/MediaContainer";
 
 function App() {
   const [mediaURL, setMediaUrl] = useState();
