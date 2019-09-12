@@ -31,3 +31,21 @@
     transform: rotate(360deg);
   }
 }
+
+.description {
+  width: 600px;
+  height: 300px;
+  color: black;
+  margin: auto;
+  padding-top:30px;
+}
+
+.date{
+  margin:auto;
+  height: 30px;
+}
+
+.img img{
+  width:300px;
+  height:300px;
+}
