@@ -8,19 +8,21 @@ function App() {
   const [description, setDescription] = useState();
   const [title, setTitle] = useState();
   const [mediaType, setMediaType] = useState();
+  const [date, setDate] = useState("");
 
   useEffect(()=> {
-   axios.get("https://api.nasa.gov/planetary/apod?api_key=h6gk8qlDpi9XRYbLiuRoagS4u6yAbIv0CxNm64Td")
+   axios.get(`https://api.nasa.gov/planetary/apod?api_key=h6gk8qlDpi9XRYbLiuRoagS4u6yAbIv0CxNm64Td&date=${date}`)
       .then(response => {
         setMediaUrl(response.data.url);
         setDescription(response.data.explanation);
         setTitle(response.data.title);
         setMediaType(response.data.media_type);
+        setDate(response.data.date);
       })
       .catch(error => {
         console.log(error);
       })
-  }, [mediaURL])
+  }, [mediaURL, date])
 
   return (
     <>
@@ -29,10 +31,12 @@ function App() {
           <h3>NASA Photo of the Day</h3>
         </div>
         <MediaContainer
+          date={date}
           mediaType={mediaType}
           title={title}
           description={description}
           mediaURL={mediaURL}
+          setDate={setDate}
         />
       </div>
     </>

@@ -32,11 +32,6 @@
   }
 }
 
-.container div:nth-child(2) {
-  width: 400px;
-  height: 200px;
-}
-
 .description {
   width: 300px;
   height: 300px;
@@ -47,4 +42,9 @@
 #text {
   width: 600px;
   height: 300px;
+}
+
+.date{
+  margin:auto;
+  height: 30px;
 }
