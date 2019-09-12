@@ -33,18 +33,19 @@
 }
 
 .description {
-  width: 300px;
+  width: 600px;
   height: 300px;
   color: black;
   margin: auto;
-}
-
-#text {
-  width: 600px;
-  height: 300px;
+  padding-top:30px;
 }
 
 .date{
   margin:auto;
   height: 30px;
+}
+
+.img img{
+  width:300px;
+  height:300px;
 }

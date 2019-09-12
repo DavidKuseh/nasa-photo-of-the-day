@@ -1,10 +1,15 @@
 import React from "react";
+import styled from "styled-components";
+
+const ImageStyle = styled.div`
+    
+`
 
 function ShowMedia({mediaURL}){
     return (
-        <>
-            <img src={mediaURL} alt="NASA photo of the day" width="300px" height="300px" />
-        </>
+        <div className="img">
+            <img src={mediaURL} alt="NASA photo of the day" />
+        </div>
     )
 }
 

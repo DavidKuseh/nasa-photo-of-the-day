@@ -2,6 +2,12 @@ import React, { useState, useEffect }from "react";
 import "./App.css";
 import axios from "axios";
 import MediaContainer from "./Components/MediaContainer";
+import styled from "styled-components";
+
+//Styling
+const BackColor = styled.div`
+  background-color:#FFE1A8;
+`
 
 function App() {
   const [mediaURL, setMediaUrl] = useState();
@@ -26,7 +32,7 @@ function App() {
 
   return (
     <>
-      <div className="App">
+      <BackColor className="App">
         <div>
           <h3>NASA Photo of the Day</h3>
         </div>
@@ -38,7 +44,7 @@ function App() {
           mediaURL={mediaURL}
           setDate={setDate}
         />
-      </div>
+      </BackColor>
     </>
   );
 }
