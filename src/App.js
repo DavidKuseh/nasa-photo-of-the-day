@@ -8,6 +8,14 @@ import styled from "styled-components";
 const BackColor = styled.div`
   background-color:#FFE1A8;
 `
+const HeaderTitle = styled.div`
+  color: white;
+  background-color: black;
+  padding: 30px;
+  font-family:'Gayathri', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+`
 
 function App() {
   const [mediaURL, setMediaUrl] = useState();
@@ -34,7 +42,7 @@ function App() {
     <>
       <BackColor className="App">
         <div>
-          <h3>NASA Photo of the Day</h3>
+          <HeaderTitle>NASA Photo of the Day</HeaderTitle>
         </div>
         <MediaContainer
           date={date}

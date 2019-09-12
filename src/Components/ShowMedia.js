@@ -2,14 +2,16 @@ import React from "react";
 import styled from "styled-components";
 
 const ImageStyle = styled.div`
-    
+ img{
+    width: 400px;
+    height: 400px;
+}
 `
-
 function ShowMedia({mediaURL}){
     return (
-        <div className="img">
+        <ImageStyle className="img">
             <img src={mediaURL} alt="NASA photo of the day" />
-        </div>
+        </ImageStyle>
     )
 }
 

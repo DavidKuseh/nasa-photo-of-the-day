@@ -11,15 +11,19 @@ const DescriptionStyle = styled.div`
     font-size: 20px;
     font-family: 'Gayathri', sans-serif;
 `
+const LabelStyle = styled.div`
+    font-family: 'Gayathri', sans-serif;
+    margin-bottom: 20px;
+`
 
 function MediaContainer({ title, description, mediaURL, mediaType, setDate }) {
     return (
         <div className = "container">
             <FontH4>{title}</FontH4>
-            <div className="date">
-                <label>Date: </label>
+            <LabelStyle className="date">
+                <label>Select Day: </label>
                 <input type="date" onChange={e=> setDate(e.target.value)}></input>
-            </div>
+            </LabelStyle>
             <ShowMedia mediaType={mediaType} mediaURL={mediaURL} />
             <DescriptionStyle>
             <Description className = "description" description={description} /> 
